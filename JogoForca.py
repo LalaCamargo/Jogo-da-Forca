@@ -2,15 +2,15 @@ import tkinter as tk  #importa tudo da biblioteca
 import random
 
 # Criação de listas importando dados dos arquivos de texto
-with open ('cores.txt', 'r') as reader:
+with open ('Assets/cores.txt', 'r') as reader:
 
 	cor = reader.readlines()
 
-with open ('frutas.txt', 'r') as reader:
+with open ('Assets/frutas.txt', 'r') as reader:
 
 	frutas = reader.readlines()
 
-with open ('objetos.txt', 'r') as reader:
+with open ('Assets/objetos.txt', 'r') as reader:
 
 	objetos = reader.readlines()
 
@@ -19,7 +19,7 @@ janela = tk.Tk()   #incia tkinter: exibe janela
 janela.title("Jogo da Forca")   #Define o título da janela 
 janela.geometry("1024x520")    #Define o tamanho da janela.
 janela.config(bg='#000000')   #Define cor background da janela
-janela.iconbitmap("favicon.ico") # Define o ícone da janela.
+janela.iconbitmap("Assets/favicon.ico") # Define o ícone da janela.
 
 
 #Widgets dos textos - JANELA INICIAL
@@ -37,7 +37,7 @@ textoOrientação4.place(relx=0.5, rely=0.8, anchor="center")     #aonde ele vai
 
 
 #Widget da imagem - JANELA INICIAL
-imagemInicial = tk.PhotoImage(file="icon.png")   #qual é a imagem
+imagemInicial = tk.PhotoImage(file="Assets/icon.png")   #qual é a imagem
 imagem = tk.Label(width=230, height=230, bg="white", image=imagemInicial)  #definindo tamanho e cor
 imagem.place(relx=0.5, rely=0.5, anchor="center") #reposicionamento da imagem na tela
 
@@ -50,7 +50,7 @@ def abrirJogoCores():
 	janela2.title('Jogo da forca')
 	janela2.geometry("1024x520")
 	janela2.config(bg='#000000')
-	janela2.iconbitmap("favicon.ico")
+	janela2.iconbitmap("Assets/favicon.ico")
 
 	#Sortear palavra
 	sorteio = random.choice(cor).strip()
@@ -95,27 +95,27 @@ def abrirJogoCores():
 
 		#Mudar imagens
 		if contador == 5:
-			imagemForca.config= tk.PhotoImage(file="imagens/2.png")   #qual é a imagem
+			imagemForca.config= tk.PhotoImage(file="Assets/imagens/2.png")   #qual é a imagem
 			imagem = tk.Label(janela2, width=200, height=200, bg="white", image=imagemForca.config)  #definindo tamanho e cor
 			imagem.place(relx=0.4, rely=0.52, anchor="center") #reposicionamento da imagem na tela
 		if contador == 4:
-			imagemForca.config= tk.PhotoImage(file="imagens/3.png")   #qual é a imagem
+			imagemForca.config= tk.PhotoImage(file="Assets/imagens/3.png")   #qual é a imagem
 			imagem = tk.Label(janela2, width=200, height=200, bg="white", image=imagemForca.config)  #definindo tamanho e cor
 			imagem.place(relx=0.4, rely=0.52, anchor="center") #reposicionamento da imagem na tela
 		if contador == 3:
-			imagemForca.config= tk.PhotoImage(file="imagens/4.png")   #qual é a imagem
+			imagemForca.config= tk.PhotoImage(file="Assets/imagens/4.png")   #qual é a imagem
 			imagem = tk.Label(janela2, width=200, height=200, bg="white", image=imagemForca.config)  #definindo tamanho e cor
 			imagem.place(relx=0.4, rely=0.52, anchor="center") #reposicionamento da imagem na tela			
 		if contador == 2:
-			imagemForca.config= tk.PhotoImage(file="imagens/5.png")   #qual é a imagem
+			imagemForca.config= tk.PhotoImage(file="Assets/imagens/5.png")   #qual é a imagem
 			imagem = tk.Label(janela2, width=200, height=200, bg="white", image=imagemForca.config)  #definindo tamanho e cor
 			imagem.place(relx=0.4, rely=0.52, anchor="center") #reposicionamento da imagem na tela
 		if contador == 1:
-			imagemForca.config= tk.PhotoImage(file="imagens/6.png")   #qual é a imagem
+			imagemForca.config= tk.PhotoImage(file="Assets/imagens/6.png")   #qual é a imagem
 			imagem = tk.Label(janela2, width=200, height=200, bg="white", image=imagemForca.config)  #definindo tamanho e cor
 			imagem.place(relx=0.4, rely=0.52, anchor="center") #reposicionamento da imagem na tela
 		if contador == 0:
-			imagemForca.config= tk.PhotoImage(file="imagens/7.png")   #qual é a imagem
+			imagemForca.config= tk.PhotoImage(file="Assets/imagens/7.png")   #qual é a imagem
 			imagem = tk.Label(janela2, width=200, height=200, bg="white", image=imagemForca.config)  #definindo tamanho e cor
 			imagem.place(relx=0.4, rely=0.52, anchor="center") #reposicionamento da imagem na tela
 
@@ -149,7 +149,7 @@ def abrirJogoCores():
 	entrada.place(relx=0.55, rely=0.6, anchor="center")
 
 	#Imagem Forca
-	imagemForca = tk.PhotoImage(file="imagens/1.png")   #qual é a imagem
+	imagemForca = tk.PhotoImage(file="Assets/imagens/1.png")   #qual é a imagem
 	imagem = tk.Label(janela2, width=200, height=200, bg="white", image=imagemForca)  #definindo tamanho e cor
 	imagem.place(relx=0.4, rely=0.52, anchor="center") #reposicionamento da imagem na tela
 	
@@ -161,7 +161,7 @@ def abrirJogoFrutas():
 	janela3.title('Jogo da forca')
 	janela3.geometry("1024x520")
 	janela3.config(bg='#000000')
-	janela3.iconbitmap("favicon.ico")
+	janela3.iconbitmap("Assets/favicon.ico")
 
 	#Sortear palavra
 	sorteio = random.choice(frutas).strip()
@@ -205,27 +205,27 @@ def abrirJogoFrutas():
 
 		#Mudar imagens
 		if contador == 5:
-			imagemForca.config= tk.PhotoImage(file="imagens/2.png")   #qual é a imagem
+			imagemForca.config= tk.PhotoImage(file="Assets/imagens/2.png")   #qual é a imagem
 			imagem = tk.Label(janela3, width=200, height=200, bg="white", image=imagemForca.config)  #definindo tamanho e cor
 			imagem.place(relx=0.4, rely=0.52, anchor="center") #reposicionamento da imagem na tela
 		if contador == 4:
-			imagemForca.config= tk.PhotoImage(file="imagens/3.png")   #qual é a imagem
+			imagemForca.config= tk.PhotoImage(file="Assets/imagens/3.png")   #qual é a imagem
 			imagem = tk.Label(janela3, width=200, height=200, bg="white", image=imagemForca.config)  #definindo tamanho e cor
 			imagem.place(relx=0.4, rely=0.52, anchor="center") #reposicionamento da imagem na tela
 		if contador == 3:
-			imagemForca.config= tk.PhotoImage(file="imagens/4.png")   #qual é a imagem
+			imagemForca.config= tk.PhotoImage(file="Assets/imagens/4.png")   #qual é a imagem
 			imagem = tk.Label(janela3, width=200, height=200, bg="white", image=imagemForca.config)  #definindo tamanho e cor
 			imagem.place(relx=0.4, rely=0.52, anchor="center") #reposicionamento da imagem na tela			
 		if contador == 2:
-			imagemForca.config= tk.PhotoImage(file="imagens/5.png")   #qual é a imagem
+			imagemForca.config= tk.PhotoImage(file="Assets/imagens/5.png")   #qual é a imagem
 			imagem = tk.Label(janela3, width=200, height=200, bg="white", image=imagemForca.config)  #definindo tamanho e cor
 			imagem.place(relx=0.4, rely=0.52, anchor="center") #reposicionamento da imagem na tela
 		if contador == 1:
-			imagemForca.config= tk.PhotoImage(file="imagens/6.png")   #qual é a imagem
+			imagemForca.config= tk.PhotoImage(file="Assets/imagens/6.png")   #qual é a imagem
 			imagem = tk.Label(janela3, width=200, height=200, bg="white", image=imagemForca.config)  #definindo tamanho e cor
 			imagem.place(relx=0.4, rely=0.52, anchor="center") #reposicionamento da imagem na tela
 		if contador == 0:
-			imagemForca.config= tk.PhotoImage(file="imagens/7.png")   #qual é a imagem
+			imagemForca.config= tk.PhotoImage(file="Assets/imagens/7.png")   #qual é a imagem
 			imagem = tk.Label(janela3, width=200, height=200, bg="white", image=imagemForca.config)  #definindo tamanho e cor
 			imagem.place(relx=0.4, rely=0.52, anchor="center") #reposicionamento da imagem na tela
 
@@ -259,7 +259,7 @@ def abrirJogoFrutas():
 	entrada.place(relx=0.55, rely=0.6, anchor="center")
 
 	#Imagem Forca
-	imagemForca = tk.PhotoImage(file="imagens/1.png")   #qual é a imagem
+	imagemForca = tk.PhotoImage(file="Assets/imagens/1.png")   #qual é a imagem
 	imagem = tk.Label(janela3, width=200, height=200, bg="white", image=imagemForca)  #definindo tamanho e cor
 	imagem.place(relx=0.4, rely=0.52, anchor="center") #reposicionamento da imagem na tela
 
@@ -270,7 +270,7 @@ def abrirJogoObjetos():
 	janela4.title('Jogo da forca')
 	janela4.geometry("1024x520")
 	janela4.config(bg='#000000')
-	janela4.iconbitmap("favicon.ico")
+	janela4.iconbitmap("Assets/favicon.ico")
 
 	#Sortear palavra
 	sorteio = random.choice(objetos).strip()
@@ -314,27 +314,27 @@ def abrirJogoObjetos():
 
 		#Mudar imagens
 		if contador == 5:
-			imagemForca.config= tk.PhotoImage(file="imagens/2.png")   #qual é a imagem
+			imagemForca.config= tk.PhotoImage(file="Assets/imagens/2.png")   #qual é a imagem
 			imagem = tk.Label(janela4, width=200, height=200, bg="white", image=imagemForca.config)  #definindo tamanho e cor
 			imagem.place(relx=0.4, rely=0.52, anchor="center") #reposicionamento da imagem na tela
 		if contador == 4:
-			imagemForca.config= tk.PhotoImage(file="imagens/3.png")   #qual é a imagem
+			imagemForca.config= tk.PhotoImage(file="Assets/imagens/3.png")   #qual é a imagem
 			imagem = tk.Label(janela4, width=200, height=200, bg="white", image=imagemForca.config)  #definindo tamanho e cor
 			imagem.place(relx=0.4, rely=0.52, anchor="center") #reposicionamento da imagem na tela
 		if contador == 3:
-			imagemForca.config= tk.PhotoImage(file="imagens/4.png")   #qual é a imagem
+			imagemForca.config= tk.PhotoImage(file="Assets/imagens/4.png")   #qual é a imagem
 			imagem = tk.Label(janela4, width=200, height=200, bg="white", image=imagemForca.config)  #definindo tamanho e cor
 			imagem.place(relx=0.4, rely=0.52, anchor="center") #reposicionamento da imagem na tela			
 		if contador == 2:
-			imagemForca.config= tk.PhotoImage(file="imagens/5.png")   #qual é a imagem
+			imagemForca.config= tk.PhotoImage(file="Assets/imagens/5.png")   #qual é a imagem
 			imagem = tk.Label(janela4, width=200, height=200, bg="white", image=imagemForca.config)  #definindo tamanho e cor
 			imagem.place(relx=0.4, rely=0.52, anchor="center") #reposicionamento da imagem na tela
 		if contador == 1:
-			imagemForca.config= tk.PhotoImage(file="imagens/6.png")   #qual é a imagem
+			imagemForca.config= tk.PhotoImage(file="Assets/imagens/6.png")   #qual é a imagem
 			imagem = tk.Label(janela4, width=200, height=200, bg="white", image=imagemForca.config)  #definindo tamanho e cor
 			imagem.place(relx=0.4, rely=0.52, anchor="center") #reposicionamento da imagem na tela
 		if contador == 0:
-			imagemForca.config= tk.PhotoImage(file="imagens/7.png")   #qual é a imagem
+			imagemForca.config= tk.PhotoImage(file="Assets/imagens/7.png")   #qual é a imagem
 			imagem = tk.Label(janela4, width=200, height=200, bg="white", image=imagemForca.config)  #definindo tamanho e cor
 			imagem.place(relx=0.4, rely=0.52, anchor="center") #reposicionamento da imagem na tela
 
@@ -367,7 +367,7 @@ def abrirJogoObjetos():
 	entrada.place(relx=0.55, rely=0.6, anchor="center")
 
 	#Imagem Forca
-	imagemForca = tk.PhotoImage(file="imagens/1.png")   #qual é a imagem
+	imagemForca = tk.PhotoImage(file="Assets/imagens/1.png")   #qual é a imagem
 	imagem = tk.Label(janela4, width=200, height=200, bg="white", image=imagemForca)  #definindo tamanho e cor
 	imagem.place(relx=0.4, rely=0.52, anchor="center") #reposicionamento da imagem na tela
 
